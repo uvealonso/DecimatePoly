@@ -323,7 +323,7 @@ def CheckInputArgs(C, B_tol, P_tol):
     if B_tol and (not isinstance(B_tol, Number) or B_tol <= 0):
         raise InvalidArgumentError("`B_tol` must be a number greater than zero")
 
-    if P_tol and (not isinstance(B_tol, Number) or not (0 < P_tol < 1)):
+    if P_tol and (not isinstance(P_tol, Number) or not (0 < P_tol < 1)):
         raise InvalidArgumentError("`P_tol` must be on the interval (0,1)")
 
     return C
